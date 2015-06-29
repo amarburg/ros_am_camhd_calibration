@@ -1,0 +1,8 @@
+<launch>
+
+<include file="$(find camhd_calibration)/launch/calibrate_camhd.launch">
+  <arg name="video_path" default="/home/aaron/workspace/vision_exp/camhd_calibration_june_2015/exp/far_checkerboard_calibration/video/" />
+  <arg name="video_file" default="Capture0030_zoom_1.mov" />
+</include>
+
+</launch>

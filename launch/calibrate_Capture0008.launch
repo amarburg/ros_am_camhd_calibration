@@ -1,0 +1,7 @@
+<launch>
+
+<include file="$(find camhd_calibration)/launch/calibrate_camhd.launch">
+  <arg name="video_file" default="Capture0008_zoom_1.mov" />
+</include>
+
+</launch>

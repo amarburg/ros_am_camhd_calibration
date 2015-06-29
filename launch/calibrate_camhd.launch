@@ -1,18 +1,18 @@
 <launch>
   <arg name="cam_name" default="camhd_p2" />
-	<arg name="video_file" default="/home/aaron/workspace/vision_exp/camhd_calibration_june_2015/exp/near_checkerboard_calibration/video/Capture0008_zoom_1.mov" />
+  <arg name="video_path" default="/home/aaron/workspace/vision_exp/camhd_calibration_june_2015/exp/near_checkerboard_calibration/video/" />
+  <arg name="video_file" default="Capture0008_zoom_1.mov" /> 
 
-	<node pkg="video_tools" type="mono_streamer" name="$(arg cam_name)"
-		args="$(arg video_file)">
-		<param name="config/name" value="$(arg cam_name)" />
-		<remap from="camera" to="$(arg cam_name)" />
+  <arg name="full_cam_name" default="$(arg cam_name)_$(arg video_file)" />
+
+	<node pkg="video_tools" type="mono_streamer" name="$(arg cam_name)" args="$(arg video_path)$(arg video_file)">
+		<param name="config/name" value="$(arg full_cam_name)" />
 	</node>
 
 	<node pkg="camera_calibration" type="cameracalibrator.py" name="$(arg cam_name)_calibrator" 
 		args="--pattern=chessboard --size=8x6 --square=0.07391 -k 3">
 		<remap from="image" to="$(arg cam_name)/image_raw" />
 		<remap from="camera" to="$(arg cam_name)" />
-
 	</node>
 
 </launch>
