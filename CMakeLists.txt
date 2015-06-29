@@ -5,7 +5,7 @@ project(camhd_calibration)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  video-tools
+  video_tools
 )
 
 ## System dependencies are found with CMake's conventions
@@ -80,7 +80,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES camhd_calibration
-#  CATKIN_DEPENDS video-tools
+#  CATKIN_DEPENDS video_tools
 #  DEPENDS system_lib
 )
 
