@@ -1,6 +1,6 @@
 <launch>
   <arg name="cam_name" default="camhd_p2" />
-  <arg name="video_path" default="/home/aaron/workspace/vision_exp/camhd_calibration_june_2015/exp/near_checkerboard_calibration/video/" />
+  <arg name="video_path" default="/home/aaron/workspace/vision_exp/camhd_calibration_june_2015/exp/near_checkerboard/video/" />
   <arg name="video_file" default="Capture0008_zoom_1.mov" /> 
 
   <arg name="full_cam_name" default="$(arg cam_name)_$(arg video_file)" />

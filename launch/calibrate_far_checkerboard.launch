@@ -2,6 +2,7 @@
 
 <include file="$(find camhd_calibration)/launch/calibrate_camhd.launch">
   <arg name="video_path" default="/home/aaron/workspace/vision_exp/camhd_calibration_june_2015/exp/far_checkerboard/video/" />
+  <arg name="video_file" default="foo.mov" />
 </include>
 
 </launch>
